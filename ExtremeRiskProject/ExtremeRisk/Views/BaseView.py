@@ -18,7 +18,6 @@ class BaseView(Tkinter.Tk):
     def __init__(self):
         Tkinter.Tk.__init__(self)
         self.InitializeBase()
-        self.initialize();
     
     def InitializeBase(self):
         objMenu = self.CreateMenu()
