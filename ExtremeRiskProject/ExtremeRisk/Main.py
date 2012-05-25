@@ -1,7 +1,7 @@
 from Views.IntroView import IntroView
 
 def main():
-    app = IntroView(None)
+    app = IntroView()
     app.title('Extreme Risk')
     app.mainloop()
     

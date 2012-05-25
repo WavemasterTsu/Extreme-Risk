@@ -2,11 +2,9 @@ from BaseView import BaseView
 
 class IntroView(BaseView):
     
-    def __init__(self, parent):
-        BaseView.__init__(BaseView(self), parent)
-        self.parent = parent
-        self.initialize()
+    def __init__(self):
+        BaseView.__init__(self)
+        self.Initialize()
         
-    def initialize(self):
-        print "Hello World"
+    def Initialize(self):
         pass

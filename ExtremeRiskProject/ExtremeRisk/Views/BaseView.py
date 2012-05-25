@@ -15,11 +15,11 @@ class BaseView(Tkinter.Tk):
         
         return objMenu
     
-    def __init__(self, parent):
-        Tkinter.Tk.__init__(self, parent)
-        self.parent = parent
-        self.initialize()
+    def __init__(self):
+        Tkinter.Tk.__init__(self)
+        self.InitializeBase()
+        self.initialize();
     
-    def initialize(self):
+    def InitializeBase(self):
         objMenu = self.CreateMenu()
         self.config(menu=objMenu)
