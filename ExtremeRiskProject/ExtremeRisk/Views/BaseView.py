@@ -22,3 +22,4 @@ class BaseView(Tkinter.Tk):
     def InitializeBase(self):
         objMenu = self.CreateMenu()
         self.config(menu=objMenu)
+        self.grid()
