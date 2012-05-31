@@ -1,25 +1,15 @@
-import Tkinter
+import gtk
+from Controls import Menu
 
-class BaseView(Tkinter.Tk):   
-             
-    def CreateMenu(self):
-        objMenu = Tkinter.Menu(self)
-        
-        objFileMenu = Tkinter.Menu(objMenu, tearoff=0)
-        objFileMenu.add_command(label="New")
-        objFileMenu.add_command(label="Load")
-        objFileMenu.add_command(label="Save")
-        objFileMenu.add_command(label="Exit")
-        
-        objMenu.add_cascade(label="File", menu=objFileMenu)
-        
-        return objMenu
+class BaseView(gtk.Window):
     
     def __init__(self):
-        Tkinter.Tk.__init__(self)
+        super(BaseView, self).__init__()
+        self.connect("destroy", gtk.main_quit)
+        self.set_position(gtk.WIN_POS_CENTER)
         self.InitializeBase()
     
     def InitializeBase(self):
-        objMenu = self.CreateMenu()
         self.config(menu=objMenu)
-        self.grid()
+        self.show()
+        gtk.main()

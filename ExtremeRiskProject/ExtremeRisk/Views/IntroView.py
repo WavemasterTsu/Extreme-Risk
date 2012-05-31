@@ -1,4 +1,4 @@
-import Tkinter
+import gtk
 from BaseView import BaseView
 
 class IntroView(BaseView):
@@ -11,6 +11,7 @@ class IntroView(BaseView):
         self.Initialize()
         
     def Initialize(self):
-        btnPlay = Tkinter.Button(self, text=u"Start Extreme Risk!", command=self.btnPlay_Click)
-        btnPlay.grid(column=0, row=0)
+        btnPlay = gtk.Button(self, text=u"Start Extreme Risk!", command=self.btnPlay_Click)
+        btnPlay.grid(column=0, row=0, padx=20, pady=20)
+        self.set_size_request(200, 400)
         pass

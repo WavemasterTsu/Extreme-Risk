@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>ExtremeRiskProject</name>
+	<name>ExtremeRisk_Project</name>
 	<comment></comment>
 	<projects>
+		<project>ExtremeRisk_Libraries</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
